@@ -74,12 +74,8 @@ class DescribeTypeRTTIReflector implements Reflector
 		{
 			return Array;
 		}
-		
-		#if cpp
-			return Type.getClass(value);
-		#else
-			return value.constructor;
-		#end
+
+		return Type.getClass(value);
 	}
 
 	public function getFQCN(value :Dynamic, replaceColons:Bool = false):String
