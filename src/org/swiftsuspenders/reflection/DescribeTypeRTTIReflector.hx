@@ -271,7 +271,11 @@ class DescribeTypeRTTIReflector implements Reflector
 		{
 			if(node.nodeType == Xml.Element ){
 				var nodeFast = new Fast(node);
-				parameters.push(nodeFast.att.path + "|");
+				if( nodeFast.has.path ){
+					parameters.push(nodeFast.att.path + "|");
+				} else {
+					parameters.push("Dynamic|");
+				}
 			}
 		}
 		parameters.pop();
