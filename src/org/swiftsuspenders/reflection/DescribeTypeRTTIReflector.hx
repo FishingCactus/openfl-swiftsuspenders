@@ -167,12 +167,12 @@ class DescribeTypeRTTIReflector implements Reflector
 		
 		rtti = untyped type.__rtti;
 		if (rtti == null) {
-			var _isInterface = isInterface(type);
+			/*var _isInterface = isInterface(type);
 			var _inWhitelist = inWhitelist(type);
 			
 			if (!_isInterface && !_inWhitelist) {
-				//trace("Warning: " + CallProxy.getClassName(type) + " missing @:rtti matadata");
-			}
+				trace("Warning: " + CallProxy.getClassName(type) + " missing @:rtti matadata");
+			}*/
 		}
 		
 		if (rtti != null) {
@@ -241,8 +241,6 @@ class DescribeTypeRTTIReflector implements Reflector
 			description.ctor = new NoParamsConstructorInjectionPoint();
 			return;
 		}
-		
-		var className = CallProxy.getClassName(type);
 		
 		// CHECK add injectParameters
 		var injectParameters:Map<String,Dynamic> = null;
