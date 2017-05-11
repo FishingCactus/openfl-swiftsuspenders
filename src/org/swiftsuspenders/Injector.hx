@@ -551,7 +551,7 @@ class Injector extends EventDispatcher
 	{
 		_managedObjects.remove(UID.clearInstanceID(instance));
 		var type:Class<Dynamic> = _reflector.getClass(instance);
-		var typeDescription:TypeDescription = getTypeDescription(type);
+		/*var typeDescription:TypeDescription = */getTypeDescription(type);
 		// FIX
 		/*for (var preDestroyHook:PreDestroyInjectionPoint = typeDescription.preDestroyMethods; preDestroyHook; preDestroyHook = PreDestroyInjectionPoint(preDestroyHook.next))
 		{
