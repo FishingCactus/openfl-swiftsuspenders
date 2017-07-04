@@ -8,6 +8,5 @@
 	"releasenote": "revert changes to PropertyInjectionPoint",
 	"contributors": [ "p.j.shand" ],
 	"dependencies": {
-		"openfl": ""
 	}
 }
